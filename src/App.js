@@ -32,7 +32,9 @@ function App() {
   return (
     <ThemeProvider theme={theme[currentTheme]}>
       <GlobalStyle />
-      <ThemeButton onClick={ChangeCurrentTheme}>Switch theme</ThemeButton>
+      <ThemeButton onClick={ChangeCurrentTheme}>
+        {currentTheme === "light" ? "Dark mode" : "Light mode"}
+      </ThemeButton>
       <Home />
       <CookieList />
     </ThemeProvider>
